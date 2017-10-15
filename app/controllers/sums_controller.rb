@@ -5,12 +5,11 @@ class SumsController < ApplicationController
 	end
 
 	def create
-		csv_file = params[:csv_file]
-		csv_file_path = csv_file.path
-
+		file = params[:file]
+		file_path = file.path
 		result = 0;
 
-		CSV.foreach(csv_file_path) do |row|
+		CSV.foreach(file_path) do |row|
 			result += row[0].to_f
 		end
 
