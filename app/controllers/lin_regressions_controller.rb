@@ -22,6 +22,6 @@ class LinRegressionsController < ApplicationController
 
 		slope, intercept = line.coefficients
 		
-		render plain: '%.6f,%.6f' % [slope, intercept]
+		render plain: '%.6f,%.6f' % [intercept, slope]
 	end
 end
